@@ -1,0 +1,29 @@
+{
+  "name": "battery",
+  "version": "1.0.0",
+  "description": "nexpaq Battery app",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Chernov",
+  "license": "ISC",
+  "buildFiles": [
+    "manifest.json",
+    "icon.svg",
+    "index.html",
+    "css/**/*",
+    "fonts/**/",
+    "img/**/",
+    "js/**/",
+    "vendor/**/"
+  ],
+  "devDependencies": {
+    "bourbon": "^4.3.4",
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-zip": "^3.0.2",
+    "rimraf": "^2.6.1"
+  }
+}

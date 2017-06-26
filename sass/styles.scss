@@ -1,0 +1,17 @@
+@import 'bourbon';
+@import 'variables';
+@import 'global';
+
+// MIXINS
+
+
+// PARTIALS
+@import 'partial/dialog';
+@import 'partial/explanation-board';
+@import 'partial/battery-board';
+
+// TOOLS
+
+// SCREENS
+@import 'screen/main';
+

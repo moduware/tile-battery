@@ -1,0 +1,49 @@
+.explanation-board{
+  @extend .no-overflow;
+  @include position(fixed, 0 0 null null);
+  width: 100%;
+  height: 100%;
+  background-color:#90CF42;
+  font-size:14px;
+
+
+  .boarding-image-one {
+    @include position(absolute, 40% null null 45%);
+    @include transform(translateX(-50%) translateY(-50%));
+    width: 175px;
+    height: 284px;
+    background: url(../img/onboarding-one.svg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+
+  .boarding-image-two {
+    @include position(absolute, 40% null null 50%);
+    @include transform(translateX(-50%) translateY(-50%));
+    width: 136px;
+    height: 284px;
+    background: url(../img/onboarding-two.svg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+  .onboarding-info {
+  @include position(absolute, 70% null null 50%);
+  @include transform(translateX(-50%) translateY(-50%));
+  width: 100%;
+  text-align: center;
+  color: #4B8A03;
+  font-weight: 400;
+  font-size: 14px;
+  }
+
+  .confirm-message {
+  @include position(absolute, 92% null null 50%);
+  @include transform(translateX(-50%) translateY(-50%));
+  width: 100%;
+  color:white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  }
+}
+

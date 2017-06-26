@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Battery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" sizes="192x192" href="img/battery.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- vendor-->
+    <!-- libs-->
+   
+    <script type="text/javascript" src="js/NexpaqHeader.js"></script> 
+    <!-- partials-->
+    <!-- tools	-->
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+    <div id="explanation-board" class= "explanation-board " >
+      <div id="onboarding-one" class="onboarding-one">
+        <div class= "boarding-image-one" ></div>
+        <span class= "onboarding-info">Battery modules only charge the case.</span>
+      </div>
+      <div id="onboarding-two" class="onboarding-two hidden" >
+        <div class= "boarding-image-two"></div>
+        <span class= "onboarding-info">To charge your phone use switcher on dashboard.</span>
+      </div>
+        <button id="confirm-button" class="button">ok</button>
+        <!--<span class="confirm-message">Don't show again</span>-->
+    </div>
+    <div id= "battery-board" class= "battery-board hidden" >
+      <div class = "battery-status">
+        <span class="percentage"></span>
+        <span class="voltage">-</span>
+      </div>
+      <div id= "charging-status" class= "charging-status" >
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="checkbox" id="myonoffswitch">
+          <label class="switch-label" for="myonoffswitch"></label>
+        </div>
+        <span class="charge">Charge Nexpaq</span>
+        <span class="status">Not Charging</span>
+      </div>
+      <!--<span class="battery-info">The battery will be charged automatically when Nexpaq is connected to a power supply.</span>-->
+    </div>
+  </body>
+</html>

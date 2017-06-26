@@ -1,0 +1,117 @@
+.battery-board {
+  @extend .no-overflow;
+  @include position(fixed, 0 0 null null);
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  
+  .battery-status {
+    @include position(absolute, 0 0 null null);
+    width: 100%;
+    height: 50%;
+    background-color: #90CF42;
+    color: white;
+    
+    .percentage {
+      @include position(absolute, 50% null null 50%);
+      @include transform(translateX(-50%) translateY(-50%));
+      font-size: 100px;
+      font-weight: normal;
+    }
+
+    .voltage {
+      @include position(absolute, 80% null null 50%);
+      @include transform(translateX(-50%) translateY(-50%));
+      font-size: 20px;
+    }
+  }
+
+  .charging-status {
+    @include position(absolute, 50% null null null);
+    width: 100%;
+    height: 9%;
+    background-color: white;
+    color: #949494;
+
+    .onoffswitch {
+      @include position(absolute, 50% null null 85%);
+      @include transform(translateX(-50%) translateY(-50%));
+      width: 51px;
+      -webkit-user-select: none; 
+      -moz-user-select: none;
+      -ms-user-select: none;
+
+      .checkbox {
+        display: none;
+         &:checked + .switch-label {
+          background-color: #90CF42;
+          border: #90CF42
+        }
+         &:checked + .switch-label::before {
+          transform: translateY(-50%) translateX(20px);
+          transition: 0.3s;
+          background-color: white;
+          border: 1px solid white;
+        }
+      }
+      & .switch-label {
+        display: block; 
+        overflow: hidden; 
+        height: 32px;
+        width: 51px; 
+        padding: 0; 
+        border: 1px solid #C8C7CC; 
+        border-radius: 18px;
+        background-color: white;
+
+
+        &::before {
+          content: "";
+          display: block; 
+          width: 28px;
+          height: 28px;
+          background: white;
+          position: absolute;
+          top: 50%;
+          border-radius: 50%;
+          transform: translateY(-50%) translateX(0px);
+          transition: 0.3s;
+          -webkit-box-shadow: 1px 1px 1px 1px #979797;
+          -moz-box-shadow: 1px 1px 1px 1px #979797;
+          box-shadow: 1px 1px 1px 1px #979797;
+        }
+      }
+    }
+    &::before {
+      content: "";
+      width: 14px;
+      height: 21px;
+      display: block; 
+      background: url(../img/icon-battery.svg);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      color: #929292;
+      @include position(absolute,50% null null 10%);
+      @include transform(translateX(-50%) translateY(-50%));
+    }
+    .charge {
+      @include position(absolute,20% null null 20%);
+      color: black;
+      font-size: 17px;
+      font-weight: normal;
+    }
+    .status {
+      @include position(absolute,60% null null 20%);
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+  .battery-info {
+    @include position(absolute, 95% null null 50%);
+    @include transform(translateX(-50%) translateY(-50%));
+    width: 95%;
+    color: #6E6E70;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}

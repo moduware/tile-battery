@@ -1,0 +1,12 @@
+.button {
+		@include position(absolute, 85% null null 50%);
+  		@include transform(translateX(-50%) translateY(-50%));
+		width: 152px;
+		height:29px;
+		border: 1px solid white;
+		border-radius:3px;
+		font-size: 15px;
+    	color:white;
+    	font-weight: 400;
+	}
+
